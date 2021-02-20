@@ -1,0 +1,43 @@
+{
+  "ORG_ID": "招商银行机构代码Json",
+  "MORT_CONTRACT_NO": "抵押合同编号",
+  "MORTGAGEE": "抵押权人姓名",
+  "STATUS": "0",
+  "MSG": "查无数据",
+  "APPLICANT": [
+    {
+      "MORTGAGOR ": "抵押人姓名",
+      "ID_TYPE": "证件类型 ",
+      "ID_NO": "证件号码",
+      "MORTGAGOR_TEL": "抵押人联系电话",
+      "MORTGAGOR_ADDR": "抵押人联系地址",
+      "REAL_NAME": "不动产名称（坐落）",
+      "CERT_NO": "不动产证号或预售合同号",
+      "CERT_NO_PRE": "卖方不动产证号",
+      "REAL_UNIT_NO": "不动产单元号",
+      "SHARED_TYPE ": "不动产共有情况 ",
+      "PORTION ": "共有份额",
+      "AGENT_NAME": "代理人姓名",
+      "AGENT_ID_TYPE ": "代理人证件类型",
+      "AGENT_ID_NO ": "代理人证件号码"
+    }
+  ],
+  "DEBT_TYPE": "01 ",
+  "REG_TYPE": "D01 ",
+  "LOAN_REASON": "贷款原因",
+  "LOAN_PRICE": "贷款金额",
+  "DEBT_PRICE": "被担保主债权数额",
+  "DEBT_STARTDATE": "债务履行起始日期 ",
+  "DEBT_ENDATE": "债务履行结束日期 ",
+  "ASSUER_RANGE": "担保范围",
+  "MAX_DEBT_EVALUAT": "最高债权数额",
+  "MAX_DEBT_START": "2019-07-12",
+  "MAX_DEBT_END": "2029-07-12",
+  "DEBT_MAN": "债务人",
+  "MORT_SHARED_TYPE": "01 ",
+  "MORT_SHARED_PORTION": "",
+  "MORT_CONTRACT_DATE": "抵押合同签订日期",
+  "CONTRACT_URL ": "http://... ",
+  "CONTRACT_FILE_TYPE ": "01 ",
+  "COMMENT": "备注:"
+}

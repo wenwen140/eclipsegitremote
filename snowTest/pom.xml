@@ -1,0 +1,83 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.pingan</groupId>
+	<artifactId>snowTest</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>snowTest</name>
+	<url>http://maven.apache.org</url>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>4.3.17.RELEASE</version>
+		</dependency>
+
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-beans</artifactId>
+		<version>4.3.17.RELEASE</version>
+	</dependency>
+		
+
+<!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+<dependency>
+    <groupId>com.alibaba</groupId>
+    <artifactId>fastjson</artifactId>
+    <version>1.2.73</version>
+</dependency>
+
+
+	</dependencies>
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>buildnumber-maven-plugin</artifactId>
+				<version>1.4</version>
+				<configuration>
+					<timestampFormat>yyyy-MM-dd HHmmss</timestampFormat>
+<!-- 					<timestampFormat>yyyy-MM-dd HH:mm:ss</timestampFormat> -->
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>create-timestamp</goal>
+						</goals>
+					</execution>
+				</executions>
+				<inherited>false</inherited>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifestEntries>
+							<Build-time>${timestamp}</Build-time>
+						</manifestEntries>
+					</archive>
+				</configuration>
+
+			</plugin>
+
+		</plugins>
+	</build>
+
+</project>

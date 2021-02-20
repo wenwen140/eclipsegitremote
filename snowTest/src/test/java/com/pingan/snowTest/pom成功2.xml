@@ -1,0 +1,90 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.pingan</groupId>
+  <artifactId>snowTest</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>snowTest</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  
+<build>
+<!--     <finalName>ProjectName-${current.time}</finalName> -->
+    <plugins>
+<!--         <plugin> -->
+<!--             <groupId>org.codehaus.mojo</groupId> -->
+<!--             <artifactId>build-helper-maven-plugin</artifactId> -->
+<!--             <version>1.9.1</version> -->
+<!--             <executions> -->
+<!--                 <execution> -->
+<!--                     <id>timestamp-property</id> -->
+<!--                     <goals> -->
+<!--                         <goal>timestamp-property</goal> -->
+<!--                     </goals> -->
+<!--                 </execution> -->
+<!--             </executions> -->
+<!--             <configuration> -->
+<!--                 <name>current.time</name> -->
+<!--                 <pattern>yyyyMMdd-HHmmss</pattern> -->
+<!--                 <timeZone>GMT+8</timeZone> -->
+<!--             </configuration> -->
+<!--         </plugin> -->
+
+<plugin>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>buildnumber-maven-plugin</artifactId>
+    <version>1.4</version>
+    <configuration>
+<!--         <timestampFormat>yyyyMMdd</timestampFormat> -->
+        <timestampFormat>yyyy-MM-dd HH:mm:ss</timestampFormat>
+    </configuration>
+    <executions>
+        <execution>
+            <goals>
+                <goal>create-timestamp</goal>
+            </goals>
+        </execution>
+    </executions>
+    <inherited>false</inherited>
+</plugin>
+       
+        <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <configuration>
+                        <archive>
+                            <manifest>
+                                <addClasspath>true</addClasspath>
+                                <classpathPrefix>lib/</classpathPrefix>
+                                <mainClass>com.xxx.App</mainClass>
+                                <useUniqueVersions>false</useUniqueVersions>
+                            </manifest>
+                            <manifestEntries>
+<!--                                 <Build-time>${current.time}</Build-time>   -->
+                                <Build-time>${timestamp}</Build-time>  
+                            </manifestEntries>
+                        </archive>
+                    </configuration>
+
+</plugin>
+        
+    </plugins>
+</build>
+  
+</project>
