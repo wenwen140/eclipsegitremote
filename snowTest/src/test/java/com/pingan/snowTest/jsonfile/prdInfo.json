@@ -1,0 +1,32 @@
+{
+	"balance": 88.88,
+	"gmtBroth": "2021-02-21T22:48:14.890",
+	"id": 22,
+	"navList": [
+		{
+			"initNav": 1.00,
+			"navDate": "2020-11-11",
+			"prdName": "净值2",
+			"totalNav": 2.22
+		},
+		{
+			"initNav": 1.00,
+			"navDate": "2020-12-22",
+			"prdName": "净值3",
+			"totalNav": 3.33
+		}
+	],
+	"rateList": [
+		{
+			"prdName": "收益率2",
+			"prdRate": 33.55,
+			"rateDate": "1999-6-6"
+		},
+		{
+			"prdName": "收益率3",
+			"prdRate": 44.99,
+			"rateDate": "1999-6-7"
+		}
+	],
+	"userName": "产品名称"
+}
