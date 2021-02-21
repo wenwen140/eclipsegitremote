@@ -7,10 +7,10 @@
 			"initNav": 1.00,
 			"navDate": "2020-11-11",
 			"prdName": "净值2",
-			"totalNav": 2.22
+			"totalNav": "2.22"
 		},
 		{
-			"initNav": 1.00,
+			"initNav": "",
 			"navDate": "2020-12-22",
 			"prdName": "净值3",
 			"totalNav": 3.33
